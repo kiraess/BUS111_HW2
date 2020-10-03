@@ -19,13 +19,14 @@ trio(3,4,5)
 
 
 # Question 2
-for (i in 100:10){
-  if (i == 2) {
+for (i in 1000:100){
+  if (i == 2) { #in case someone chases to the code to include 2 
     print(i)
   } else if (!any(i %% 2:(i-1) == 0)) {
     print(i)
   } 
 }
+
 
 # Question 2 extra credit 
 is_prime = function(n){
