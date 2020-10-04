@@ -41,7 +41,7 @@ is_prime = function(n){
 
 is_prime(2)
 is_prime(6)
-is_prime(7)
+is_prime(97)
 
 
 # Question 3a 
@@ -58,12 +58,16 @@ price= matrix(temp_b, nrow =3, ncol = 1, byrow = TRUE)
 rownames(price) = c("Wine", "Vodka", "Lemon Juice")
 price
 
-#calculate cost of each blend with dot product 
+#calculate cost of each blend with dot product S
 cost = wine_blend %*% price
 rownames(cost) = c("Blend A", "Blend B", "Blend C")
 colnames(cost) = c("Cost")
 cost
 
 # Question 3b
-totalPrice = 10*cost[1,1] + 4*cost[2,1] + 5*cost[3,1]
-totalPrice
+totalPrice = function(a,b,c){
+  tPrice = a*cost[1,1] + b*cost[2,1] + c*cost[3,1]
+  return(tPrice)
+}
+
+totalPrice(10, 4, 5)
